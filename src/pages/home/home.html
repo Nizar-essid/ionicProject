@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Acceuil  </ion-title>
+    <ion-searchbar (ionInput)="getItems($event)" [debounce]="500" placeholder="search..."></ion-searchbar>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content padding>
+
+
+<!-------------------------------------------------------->
+<ion-card *ngFor="let item of items">
+ 
+  
+    <ion-card-content>
+      <ion-item>   
+        <ion-label>Titre</ion-label>
+        <ion-label>
+        {{item.name}}
+        </ion-label></ion-item> <ion-item>  
+      <ion-label>Details</ion-label><br>
+        <ion-label> {{item.details}}</ion-label><br>
+      </ion-item> 
+      <ion-item>  
+        <ion-label>Prix</ion-label><br>
+          <ion-label> {{item.prix}}</ion-label><br>
+        </ion-item> 
+      <ion-item>  
+        <ion-label>Contact</ion-label><br>
+          <ion-label> {{item.proprietaire}}</ion-label><br>
+        </ion-item> 
+      
+    
+    </ion-card-content>
+  </ion-card>
+
+   
+</ion-content>
